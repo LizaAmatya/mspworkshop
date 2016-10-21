@@ -1,0 +1,475 @@
+/*Python learning sites*/
+
+www.learnpythonthehardway.com
+coursera.com
+education.github.com/pack : get my pack ->form->email-> upload a file -> upload college id
+			or upload transcript mark sheet for verification 
+			of being a student
+visualstudio.com/dev.essentials -> pluralsight-> activate 3 month subscription 
+				->msdn bata activate -> sign in ->6000courses
+				-> then can take any course ->paths(different paths)
+				->exam diyera certificate ni paincha
+
+
+
+//Python built-in functions learn from net
+
+/*To save need to do in new file*/
+
+x= input("name")
+name Liza Amatya
+>>> print(x)
+ Liza Amatya
+
+
+x= input("name")
+print(x)
+print("Hello world")
+
+nameliza 	//input leko 
+liza
+Hello world
+>>> str="hello world"
+>>> print(str)
+hello world
+>>> print(str[2]) 	//string as an array begin with 0
+l
+>>> print(str[2:5])	//begin with 2 to 4 no space printed
+llo
+>>> print(str *2)	//multiply by 2
+hello worldhello world
+
+>>> print(str+"test")	//string + test i.e. 
+hello worldtest
+
+>>> print(str[2:6])	//begin from 2 to 5 space printed
+llo 
+
+/*List*/
+
+>>> str= ['abcd',786, 2.23, 'john']
+>>> test= [1,2,3]
+>>> print(str)
+['abcd', 786, 2.23, 'john']
+>>> print(str[3])
+john
+>>> print(str[1:3])
+[786, 2.23]
+>>> print(str *2)
+['abcd', 786, 2.23, 'john', 'abcd', 786, 2.23, 'john']
+>>> print (str+test)		//concatenate (no double quotation in test)
+['abcd', 786, 2.23, 'john', 1, 2, 3]
+
+
+/*difference between tuple and list ;list uses big bracket but tuple uses parenthesis*/
+>>> x=5
+>>> y=10
+>>> print(x+y)
+15
+>>> list = [2,3,4]
+>>> list[1]=4
+>>> tuple = (2,3,4)
+>>> tuple[1]=5
+Traceback (most recent call last):
+  File "<pyshell#31>", line 1, in <module>
+    tuple[1]=5
+TypeError: 'tuple' object does not support item assignment
+
+
+/*Dictionary -uses {} braces ; dictionary as hash table*/
+
+>>> dict = {}
+>>> dict['one']="this is one" 		 //[key] ho i.e. one is name of key and "value"
+>>> dict[2] = "this is 2"
+>>> tinydict={'name':'john','code':6734, 'dept':'sales'}
+>>> print(dict['one']) 			#prints value for 'one' key
+this is one
+>>> print (dict[2]) 			#prints value for key 2
+this is 2
+>>> print (tinydict) 			#prints complete dictionary
+{'dept': 'sales', 'name': 'john', 'code': 6734}		//random order printed because dictionary as hash table
+
+>>> (tinydict.keys())		 #prints all keys
+dict_keys(['dept', 'name', 'code'])
+>>> (tinydict.values())			#prints all the values
+dict_values(['sales', 'john', 6734])
+
+
+
+/*during concatenation int lai str ma convert garda str(x) where x= 5 (integer)
+	e.g.	print("there are" + str(cars) + "cars available")
+ OR		print("there are",cars,"cars available")
+		print("there are",cars,"cars available",sep = "-") //sep for separation
+/*o/p*/
+		
+there are100cars available
+there are 100 cars available
+there are-100-cars available
+
+
+newstring = " There are " + str(cars) + "cars available"
+print(newstring)
+print("there are",cars,"cars available",sep = "-")
+values = (cars, "cars")
+f = "there are %d %s available " % values
+f = "there are %d %s available" %(cars, "cars")
+print(f)
+
+
+>>> 10//2
+5
+>>> 10%2
+0
+>>> 10**2
+100
+>>> word= "nepal"
+>>> word.upper()
+'NEPAL'
+
+>>> word.lower()
+'nepal'
+>>> word.capitalize()
+'Nepal'
+
+>>> #LIST
+>>> word=["Shrijan","Nikhil","Madan"]
+>>> word.sort()
+>>> print (word)
+['Madan', 'Nikhil', 'Shrijan']
+
+
+>>> name= input("enter your name")
+enter your name Liza Amatya
+>>> print(name)
+ Liza Amatya
+
+>>> #typecasting
+>>> a="10"
+>>> b="10"
+>>> print(a+b)
+1010
+>>> print(int(a)+int(b))	//typecasting
+20
+
+
+/*diff ways of printing*/
+>>> name="liza"
+>>> age="20"
+>>> print("Your name is",name,"and age is",age)
+Your name is liza and age is 20
+>>> print("Your name is %s and age is %s"%(name,age))
+Your name is liza and age is 20
+
+print("your name is {} and age is {}".format(name,age))
+your name is liza and age is 20
+>>> print("your name is {} and age is {}".format(age,name))
+your name is 20 and age is liza
+>>> print("your name is {0} and age is {1}".format(name,age))
+your name is liza and age is 20
+print("your name is {1} and age is {0}".format(age,name))
+your name is liza and age is 20
+
+
+/*controls*/
+>>> #CONTROLS
+#if
+>>> a= 10
+>>> if(a==10):    // donot forget :
+	print("true")
+//enter twice
+
+true
+
+#if else
+>>> if(n%2==0):
+	print("Even no.")
+
+	
+>>> if(n%2==0):
+	print("Even no.")
+else:
+	print("Odd no.")
+//enter twice for o/p
+	
+Odd no.
+
+
+#for
+
+for i in range(50):
+	print(i)
+//enter twice for o/p
+
+#multiplication table
+>>> n= int(input ("enter any no."))
+enter any no.5
+>>> for i in range(1,11):
+	print(n,"*",i,"=",i*n)
+
+//enter twice for o/p
+
+
+#while
+
+i=0
+>>> while(i<=10):
+	print(i)
+	i=i+1
+//enter twice for o/p
+
+
+#break
+
+>>> i=0
+>>> while(i<=10):
+	print(i)
+	i=i+1
+	if(i==5):
+		break
+0
+1
+2
+3
+4
+
+#continue
+
+ i=0
+>>> while(i<=10):
+	print(i)
+	i=i+1
+	if(i==5):
+		continue
+	print("contd...")
+
+	
+0
+contd...
+1
+contd...
+2
+contd...
+3
+contd...
+4
+5
+contd...
+6
+contd...
+7
+contd...
+8
+contd...
+9
+contd...
+10
+contd...
+
+>>> i=0
+>>> while(i<=10):
+	i=i+1
+	if(i<=5):
+		continue
+	print(i)
+
+	
+6
+7
+8
+9
+10
+11
+
+
+
+>>> names=["john","kumar","namrata"]
+>>> for name in names:
+	if(name=="kumar"):
+		print("instructor found")
+		break
+	print("%s found,but not our instructor."%name)
+
+	
+john found,but not our instructor.
+instructor found
+
+
+#function
+
+>>> def example():
+	print("welcome to function")
+
+	
+>>> example()
+welcome to function
+>>> def name():			// don't forget :
+	n=input("enter your name : ")
+	print(n)
+
+>>> name()
+enter your name : liza
+liza
+
+
+#function with arguments
+
+def add(a,b):
+    c=a+b
+    print(c)
+
+
+
+
+def subtract(a,b):
+    c=a-b
+    print(c)
+
+>>> add(5,6)
+11
+>>> subtract(8,5)
+3
+
+
+#import time 
+
+import time
+print("this is python programming")
+time.sleep(3)
+print("thank you")
+
+
+#function
+
+def sum(a,b):
+    return a+b
+def divide(number, divideby):
+    return number/divideby
+print(divide(10,5))
+print(divide(50,10))
+print(divide(10,50))
+print(divide(divideby=10, number=50))
+
+def sum(*numbers):		//makes tuple - can take many nos.
+    print(numbers)
+print(sum(1))
+print(sum(1,2))
+
+
+def sum(*numbers):
+    sum=0
+    for number in numbers:
+        if number < 0:
+            continue
+        sum += number
+    return sum
+
+print(sum(1))
+print(sum(1,2))
+print(sum(1,2,-5))
+
+
+/*Pass By Reference no use of pointer pass by value acts as pass by ref */
+
+def change_the_list(mylist):
+    mylist = [1,2,3]
+    print("Values inside function",mylist)
+    return
+mylist = [5,6,7]
+print("values outside function",mylist)
+
+//run
+
+/*Function Arguments */
+
+1.Required Args
+2.Keyword Args
+3.default args
+4.variable-length args
+
+/*required args*/ 
+def change_the_list(mylist):
+    mylist = [1,2,3]
+    print("Values inside function",mylist)
+    return
+mylist = [5,6,7]
+print("values outside function",mylist)
+
+change_the_list() //error
+change_the_list([1,5]) // ok o/p - [1,2,3]
+
+
+/*keyword args*/
+def change_the_list(name,age):
+    mylist = [1,2,3]
+    print("name:",name)
+    print("age: ",age)
+    return
+
+change_the_list("liza",19)
+change_the_list(19,"liza")
+change_the_list(age=19,name="liza")
+
+
+/*default args*/
+
+def change_the_list(name,age=19):
+    mylist = [1,2,3]
+    print("name:",name)
+    print("age: ",age)
+    return
+
+change_the_list("liza")
+change_the_list("rujeena")
+change_the_list(name="liza")
+
+
+/*variable length*/
+
+def number(*argument):
+    print(argument)
+
+number(1)
+number(1,2)
+
+/*local and global variables*/
+
+argument = 3
+def number():
+    argument = 4
+    print("local variable:",argument)
+
+number()   				//print local = 4 (o/p)
+print("global variable: ",argument)  //outside function i.e. print global = 3 (o/p)
+
+/*Module : import other python code in another python code */
+
+/*open python ko actual file location-> scripts folder -> copy then add it to environmental variable*/
+
+/*to import*/
+
+import python2 //(python2->name of file) in shell or in another py file
+
+
+/*dir() - built in function sorts list in given module
+ dir(module name)*/
+
+import python2
+dir(python2)
+
+import math
+dir(math)	
+
+import builtins
+dir(builtins)  //lists all the builtin functions
+
+
+
+
+
+
+
+
+
+
+
+

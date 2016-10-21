@@ -1,0 +1,81 @@
+/*IN COMMAND PROMPT*/
+
+after adding script of python to env variable
+
+in cmd, type pip then enter //no error
+//pip is used to import module from net i.e. existing or other modules
+
+open new folder 
+open cmd prompt in that folder - shift+ right click
+open texteditor and open the folder
+make new .py file in it
+
+then cmd ma- pip (enter)
+it lists diff commands 
+
+pip search requests   //requests -already existing module (module_name)
+
+//request vanne mmodule
+
+pip install requests  //module_name
+
+
+/*in text editor*/
+
+import requests
+
+newname = requests.get("https://google.com")
+
+print(request)
+
+/*in cmd*/
+python python_file_name.py   // python first.py
+<Response [200]>
+
+
+/*in texteditor*/
+
+import requests
+
+newname = requests.get("https://google.com")
+
+if newname.status_code == 200:
+	print("page loaded successfully")
+else:
+	print("ERROR")
+
+//run in cmd - python first.py
+
+/*in texteditor*/
+import requests
+url = "https://nikhil.info.np" //any url but may show unicode encode error
+newname = requests.get(url)
+
+if newname.status_code == 200:
+	print(newname.text)
+else:
+	print("ERROR")
+	print("status code : %d" % newname.status_code)
+
+
+//run in cmd - python first.py
+//webpage ko code displayed (nikhil.info.np ko)
+
+
+/*take weather data from net*/
+
+/*currency conversion*/
+
+import requests
+url = "net bata url copy with the currencies in url e.g. USDNPR "
+
+rate = requests.get(url)
+like above other code write like i/p, print..
+e.g.
+print(rate.status_code)
+print (rate.text)
+
+//run in cmd
+
+
+
